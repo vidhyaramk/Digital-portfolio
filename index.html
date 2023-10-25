@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <label class="navbar"></label>
+            <ul>
+               <li><a href="*">About</a></li>
+               <li><a href="*">Education</a></li>
+               <li><a href="*">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="vid">
+        <img src="images/girl.jpg">
+        </div>
+        <div id="content">
+        <h1 >Hello, I'm Vidhya...</h1>
+        <br>
+        <div id="about">
+            <h2>ABOUT:</h2>
+        <p>Helping and educating others allows me to believe that my existence is worthwhile.
+        I bring passion and enthusiasm to everything I do and have
+         an insatiable thirst for knowledge.</p>
+         </div>
+         <div id="education">
+            <h2>EDUCATION:</h2>
+            <p>Qualification:Bsc.Computer science<br>
+             College:Thiruvallur college<br>
+             University:Manonmaniam Sundaranar University</p>
+            </div>
+            <div id="contact">
+                <h2>Contact:</h2>
+                <p>phone:84595938<br>
+                   email:dkdkdj@gmail.com</p>
+            </div>
+            <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor=>
+            {
+                anchor.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const targetId=this.getAttribute('href').substring(1);
+                    const targetElement=document.getElementsById(targetId);
+                    if(targetElement){
+                        window.scrollTo({
+                            top:targetElement.offsetTop,behavior:'smooth'
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
